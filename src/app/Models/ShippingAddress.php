@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class ShippingAddress extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'post_code',
+        'address',
+        'building',
+    ];
+
+    public function user() {
+        return $this-> belongsTo('App\Models\User');
+    }
+
+    public function purchase() {
+        return $this-> belongsTo('App\Models\Purchase');
+    }
 }

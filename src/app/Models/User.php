@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -18,9 +19,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
         'email',
         'password',
+        'name',
+        'post_code',
+        'address',
+        'building',
     ];
 
     /**
@@ -41,4 +45,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function items() {
+        return $this->hasMany('App\Models\Item');
+    }
+
+    public function likes() {
+        return $this->hasMany('App\Models\Like');
+    }
+
+    public function comments() {
+        return $this->hasMany('App\Models\Comment');
+    }
+
+    public function purchases() {
+        return $this->hasMany('App\Models\Purchase');
+    }
+
+    public function shipping_addreses() {
+        return $this->hasMany('App\Models\ShippingAddress');
+    }
+
 }

@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Payment extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'payment',
+    ];
+
+    public function purchase(){
+        return $this->belongsTo('App\Models\Purchase');
+    }
 }
