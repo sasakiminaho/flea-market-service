@@ -62,8 +62,12 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Purchase');
     }
 
-    public function shipping_addreses() {
+    public function shipping_addresses() {
         return $this->hasMany('App\Models\ShippingAddress');
+    }
+
+    public function userImage() {
+        return $this->hasOne('App\Models\UserImage');
     }
 
 }

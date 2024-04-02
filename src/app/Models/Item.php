@@ -33,10 +33,13 @@ class Item extends Model
     public function purchase() {
         return $this->hasOne('App\Models\Purchase');
     }
-    
+
     public function user(){
         return $this->belongsTo('App\Models\User');
     }
 
+    public function itemImage(){
+        return $this->belongsTo('App\Models\ItemImage');
+    }
 
 }

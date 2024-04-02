@@ -11,5 +11,10 @@ class SellController extends Controller
         return view('sell');
     }
 
-    
+    // 商品画像をアップロード
+    public function upload(Request $request) {
+
+        $data = $request->all();
+        $image = $request->file
+    }
 }
