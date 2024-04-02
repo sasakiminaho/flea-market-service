@@ -18,7 +18,6 @@ class CreatePurchasesTable extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('item_id')->constrained()->cascadeOnDelete();
             $table->foreignId('payment_id')->constrained()->cascadeOnDelete();
-            $table->string('shipping_address');
             $table->timestamps();
         });
     }
