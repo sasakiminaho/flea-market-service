@@ -22,8 +22,14 @@ use App\Http\Controllers\SellController;
 // 会員登録画面の表示
 Route::get('register', [RegisterController::class,'showRegister']);
 
+// 会員登録機能
+Route::post('register', [RegisterController::class, 'register']);
+
 // ログイン画面の表示
 Route::get('login', [LoginController::class,'showLogin']);
+
+// ログイン機能
+Route::post('login', [LoginController::class, 'login']);
 
 // トップページ表示
 Route::get('/', [ItemController::class,'index']);
