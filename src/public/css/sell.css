@@ -1,0 +1,148 @@
+.sell_page {
+    height: 1000px;
+}
+
+.sell_input_page {
+    width: 50%;
+    height: 670px;
+    margin: 0 auto;
+}
+
+.sell_page_title {
+    text-align: center;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.item_image {
+    margin-top: 30px;
+    height: 180px;
+}
+
+.item_image_title {
+    font-weight: 600;
+}
+
+.image_area {
+    border: dotted 1px #5F5F5F;
+    height: 150px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.item_image_select-button {
+    border: solid 1px #FF5555;
+    background-color: white;
+    color: #FF5555;
+    height: 30px;
+    border-radius: 3px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.item_detail {
+    margin-top: 20px;
+}
+
+.item_detail_title {
+    border-bottom: solid 1px #5f5f5f;
+    color: #5F5F5F;
+}
+
+.item_category_title {
+    font-weight: 600;
+}
+
+.item_category_input {
+    width: 100%;
+    height: 25px;
+    border: solid 1px #5f5f5f;
+    border-radius: 3px;
+}
+
+.item_states {
+    margin-top: 20px;
+}
+
+.item_states_title {
+    font-weight: 600;
+}
+
+.item_states_input {
+    width: 100%;
+    height: 25px;
+    border: solid 1px #5f5f5f;
+    border-radius: 3px;
+}
+
+.item_overview {
+    margin-top: 30px;
+}
+
+.item_overview_title {
+    border-bottom: solid 1px #5f5f5f;
+    color: #5F5F5F;
+}
+
+.item_name_title {
+    font-weight: 600;
+}
+
+.item_name_input {
+    width: 100%;
+    height: 25px;
+    border: solid 1px #5f5f5f;
+    border-radius: 3px;
+}
+
+.item_explanation {
+    margin-top: 20px;
+}
+.item_explanation_title {
+    font-weight: 600;
+}
+
+.item_explanation_textarea {
+    width: 100%;
+    border: solid 1px #5f5f5f;
+    border-radius: 3px;
+}
+
+.item_price_detail {
+    margin-top: 20px;
+}
+
+.item_price_title {
+    border-bottom: solid 1px #5f5f5f;
+    color: #5F5F5F;
+}
+
+.item_price {
+    font-weight: 600;
+}
+
+.item_price_input {
+    width: 100%;
+    height: 25px;
+    border: solid 1px #5f5f5f;
+    border-radius: 3px;
+}
+
+.sell {
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+}
+
+.sell_button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: #FF5555;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}

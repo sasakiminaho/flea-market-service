@@ -1,0 +1,60 @@
+.login {
+    height: 500px;
+}
+
+.login-page {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    height: 100px;
+    padding-top: 70px;
+    margin-bottom: 60px;
+}
+
+.email {
+    font-weight: 600;
+}
+
+.password {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.form {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid silver;
+}
+
+.login-button {
+    margin-top: 60px;
+}
+
+.login-button_submit {
+    background-color: #FF5555;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 18px;
+}
+
+.register {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.register-button {
+    color: #0173CC;
+    text-decoration: none;
+}
+

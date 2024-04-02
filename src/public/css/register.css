@@ -1,0 +1,59 @@
+.register {
+    height: 500px;
+}
+
+.register-page {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.register-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    height: 100px;
+    padding-top: 70px;
+    margin-bottom: 60px;
+}
+
+.email {
+    font-weight: 600;
+}
+.password {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.form {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid silver;
+
+}
+
+.register-button {
+    margin-top: 60px;
+}
+
+.register-button_submit {
+    background-color: #FF5555;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 18px;
+}
+
+.login {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.login-button {
+    color: #0173CC;
+    text-decoration: none;
+}

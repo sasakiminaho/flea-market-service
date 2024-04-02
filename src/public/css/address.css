@@ -1,0 +1,77 @@
+.address_change {
+    height: 670px;
+}
+
+.address_change_page {
+    width: 50%;
+    height: 670px;
+    margin: 0 auto;
+
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.post-code {
+    margin-top: 70px;
+}
+
+.post-code_title {
+    font-weight: 600;
+}
+
+.post-code_input {
+    border: solid 1px silver;
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.address {
+    margin-top: 50px;
+}
+
+.address_title {
+    font-weight: 600;
+}
+
+.address_input {
+    border: solid 1px silver;
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.building {
+    margin-top: 50px;
+}
+
+.building_title {
+
+    font-weight: 600;
+}
+
+.building_input {
+    border: solid 1px silver;
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.update_button {
+    margin-top: 70px;
+    height: 40px;
+}
+
+.address_update {
+    width: 100%;
+    height: 40px;
+    background-color: #FF5555;
+    color: white;
+    font-size: large;
+    border-radius: 3px;
+    border: none;
+}

@@ -1,0 +1,133 @@
+.detail {
+    height: 700px;
+}
+
+.item-detail_page {
+    display: flex;
+    height: 700px;
+}
+
+.item-image {
+    width: 50%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.image {
+    background-color: gainsboro;
+    width: 350px;
+    height: 400px;
+
+}
+
+.item-detail {
+    width: 30%;
+    margin-top: 50px;
+}
+
+.item-name {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.item-brand-name {
+    font-size: 12px;
+}
+
+.item-price {
+    margin-top: 10px;
+}
+
+.button {
+    display: flex;
+    height: 45px;
+}
+
+.like_button {
+    width: 45px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+.comment-page {
+    width: 45px;
+    padding-top: 10px;
+}
+
+.purchase_button {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.purchase {
+    width: 100%;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #FF5555;
+    cursor: pointer;
+}
+
+.item_description {
+    margin-top: 15px;
+}
+
+.description_title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-color {
+    margin-top: 10px;
+}
+
+.description_text {
+    margin-top: 10px;
+}
+
+.item_information {
+    margin-top: 15px;
+}
+
+.item_information_title {
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item_category {
+    display: flex;
+    margin-top: 15px;
+}
+
+.category_title {
+    margin-right: 25px;
+    font-weight: 600;
+}
+.category_contents {
+    margin-right: 10px;
+    background-color: gainsboro;
+    width: 70px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.item_status {
+    margin-top: 15px;
+    display: flex;
+}
+
+.status_title {
+    margin-right: 25px;
+    font-weight: 600;
+}
+
+.status_contents {
+    width: 70px;
+    text-align: center;
+    font-size: 15px;
+}

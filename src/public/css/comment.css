@@ -1,0 +1,55 @@
+.detail {
+    height: 700px;
+}
+
+.item-detail_page {
+    display: flex;
+    height: 700px;
+}
+
+.item-image {
+    width: 50%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.image {
+    background-color: gainsboro;
+    width: 350px;
+    height: 400px;
+
+}
+
+.item-detail {
+    width: 30%;
+    margin-top: 50px;
+}
+
+.item-name {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.item-brand-name {
+    font-size: 12px;
+}
+
+.item-price {
+    margin-top: 10px;
+}
+
+.button {
+    display: flex;
+    height: 45px;
+}
+
+.like_button {
+    width: 45px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+.comment-page {
+    width: 45px;
+    padding-top: 10px;
+}

@@ -1,0 +1,119 @@
+.profile_page {
+    height: 670px;
+}
+
+.profile_change {
+    height: 670px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.profile_change_title {
+    text-align: center;
+    height: 50px;
+    padding: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.profile_image {
+    display: flex;
+    height: 120px;
+    margin-top: 30px;
+}
+
+.image {
+    border-radius: 100px;
+    width: 120px;
+    background-color: silver;
+}
+
+.change_button {
+    margin-left: 30px;
+    padding-top: 50px;
+    width: 50%;
+}
+
+.image_select {
+    border: solid 1px #FF5555;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    color: #FF5555;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.user-name {
+    margin-top: 20px;
+}
+
+.user-name_title {
+    font-weight: 600;
+}
+
+.user-name_input {
+    width: 100%;
+    height: 30px;
+    border: solid 1px silver;
+    border-radius: 3px;
+}
+
+.post-code {
+    margin-top: 20px;
+}
+
+.post-code_title {
+    font-weight: 600;
+}
+
+.post-code_input {
+    width: 100%;
+    height: 30px;
+    border: solid 1px silver;
+    border-radius: 3px;
+}
+
+.address {
+    margin-top: 20px;
+}
+
+.address_title {
+    font-weight: 600;
+}
+
+.address_input {
+    width: 100%;
+    height: 30px;
+    border: solid 1px silver;
+    border-radius: 3px;
+}
+
+.building-name {
+    margin-top: 20px;
+}
+
+.building-name_title {
+    font-weight: 600;
+}
+
+.building-name_input {
+    width: 100%;
+    height: 30px;
+    border: solid 1px silver;
+    border-radius: 3px;
+}
+
+.update {
+    margin-top: 50px;
+}
+
+.update_button {
+    width: 100%;
+    height: 40px;
+    background-color: #FF5555;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+}
