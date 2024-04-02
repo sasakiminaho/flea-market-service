@@ -18,7 +18,6 @@ class ItemsTableSeeder extends Seeder
         $param = [
             'user_id' => 1,
             'name' => 'bag',
-            'image' => 'example',
             'price' => 10000,
             'state' => '未使用',
             'explanation' => 'ダミーデータです。'

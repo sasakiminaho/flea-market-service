@@ -31,6 +31,11 @@ Route::get('login', [LoginController::class,'showLogin']);
 // ログイン機能
 Route::post('login', [LoginController::class, 'login']);
 
+// ログアウト機能
+Route::group(['middleware' => ['auth']], function(){
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+});
+
 // トップページ表示
 Route::get('/', [ItemController::class,'index']);
 
@@ -44,7 +49,7 @@ Route::get('/purchase/item_id', [PurchaseController::class,'showPurchase']);
 Route::get('/purchase/address/item_id', [PurchaseController::class,'showAddress']);
 
 // コメントページ表示
-Route::get('/comment', [ItemController::class,'showComment']);
+Route::get('/comment/item_id', [ItemController::class,'showComment']);
 
 // マイページ画面表示
 Route::get('/my_page', [UserController::class,'my_page']);

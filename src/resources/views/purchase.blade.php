@@ -25,7 +25,7 @@
         <div class="address_change">
             <div class="address_title">配送先</div>
             <div class="address_contents">
-                <a href="" class="change-button">変更する</a>
+                <a href="/purchase/address/item_id" class="change-button">変更する</a>
             </div>
         </div>
     </div>

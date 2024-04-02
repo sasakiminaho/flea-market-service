@@ -22,10 +22,10 @@
             </div>
             <div class="button">
                 <div class="like_button">⭐︎</div>
-                <div class="comment-page">💬</div>
+                <a href="/comment/item_id" class="comment-page" style="text-decoration:none;">💬</a>
             </div>
             <div class="purchase_button">
-                <button class="purchase">購入する</button>
+                <a href="/purchase/item_id"><button class="purchase">購入する</button></a>
             </div>
             <div class="item_description">
                 <div class="description_title">商品説明</div>

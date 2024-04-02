@@ -10,4 +10,6 @@ class SellController extends Controller
     public function showSell() {
         return view('sell');
     }
+
+    
 }

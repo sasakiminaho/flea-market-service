@@ -48,6 +48,17 @@
     text-decoration: none;
 }
 
+.my_page {
+    width: 30%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.my_page-button {
+    color: white;
+    text-decoration: none;
+}
+
 .register {
     width: 30%;
     padding-top: 10px;
@@ -71,4 +82,15 @@
     padding: 8px 15px;
     border-radius: 3px;
     text-decoration: none;
+}
+
+.logout {
+    margin-top: 9px;
+}
+
+.logout-button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 16px;
 }
