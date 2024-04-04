@@ -21,11 +21,6 @@ class PaymentsTableSeeder extends Seeder
         DB::table('payments')->insert($param);
 
         $param = [
-            'payment' => '現金引換'
-        ];
-        DB::table('payments')->insert($param);
-
-        $param = [
             'payment' => 'クレジットカード支払い'
         ];
         DB::table('payments')->insert($param);

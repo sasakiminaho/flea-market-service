@@ -59,3 +59,5 @@ Route::get('/my_page/profile', [UserController::class,'showProfile']);
 
 // 出品ページ表示
 Route::get('/sell', [SellController::class,'showSell']);
+
+Route::post('/sell', [SellController::class, 'upload']);

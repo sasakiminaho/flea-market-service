@@ -10,14 +10,17 @@
         <div class="sell_page_title">
             商品の出品
         </div>
-        <form action="/sell" method="POST" enctype="multipart/form-data">
+        <form action="/my_page" method="POST">
             @csrf
             <div class="item_image">
                 <div class="item_image_title">商品画像</div>
-                <div class="image_area">
-                    <input type="file" name="image">
-                    <button class="item_image_select-button">画像を選択する</button>
-                </div>
+                <form action="/sell" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="image_area">
+                        <input type="file" name="image">
+                        <button class="item_image_select-button">画像を選択する</button>
+                    </div>
+                </form>
             </div>
             <div class="item_detail">
                 <h3 class="item_detail_title">商品の詳細</h3>

@@ -18,6 +18,7 @@ class ItemsTableSeeder extends Seeder
         $param = [
             'user_id' => 1,
             'name' => 'bag',
+            'image' => '/Users/sasakiminaho/Downloads/icon_112180_256.png',
             'price' => 10000,
             'state' => '未使用',
             'explanation' => 'ダミーデータです。'

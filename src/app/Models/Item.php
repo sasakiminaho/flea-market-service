@@ -38,8 +38,4 @@ class Item extends Model
         return $this->belongsTo('App\Models\User');
     }
 
-    public function itemImage(){
-        return $this->belongsTo('App\Models\ItemImage');
-    }
-
 }

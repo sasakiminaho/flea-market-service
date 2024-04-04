@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'name',
+        'image',
         'post_code',
         'address',
         'building',
@@ -64,10 +65,6 @@ class User extends Authenticatable
 
     public function shipping_addresses() {
         return $this->hasMany('App\Models\ShippingAddress');
-    }
-
-    public function userImage() {
-        return $this->hasOne('App\Models\UserImage');
     }
 
 }
