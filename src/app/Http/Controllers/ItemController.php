@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Item;
 
 class ItemController extends Controller
 {
@@ -12,8 +13,9 @@ class ItemController extends Controller
     }
 
     // 商品詳細ページ表示
-    public function detail() {
-        return view('detail');
+    public function detail($id) {
+        $item_detail = Item::find($id);
+        return view('detail',compact('item_detail'));
     }
 
     // コメントページ表示

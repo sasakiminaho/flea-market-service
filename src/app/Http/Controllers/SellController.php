@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\SellRequest;
-use App\Http\Requests\CategoryRequest;
-use App\Models\ItemImage;
+use App\Models\Item;
+use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class SellController extends Controller
 {
@@ -14,22 +15,27 @@ class SellController extends Controller
         return view('sell');
     }
 
-    // 商品画像をアップロード
-    public function upload(Request $request) {
-
+    // 出品機能
+    public function sell(SellRequest $request) {
         $file_name = $request->file('image')->getClientOriginalName();
 
         $request->file('image')->storeAs('public/' , $file_name);
 
-        $image = ItemImage::create([
+        $item = Item::create([
+            "user_id" => Auth::user()->id,
+            "name" => $request->input("name"),
             "image" => $file_name,
+            "price" => $request->input("price"),
+            "state" => $request->input("state"),
+            "explanation" => $request->input("explanation")
         ]);
 
-        return view('sell')->with('image', $image);
+        $category = Category::create([
+            "item_id" => $item->id,
+            "category" => $request->input("category")
+        ]);
+
+        return view('/my_page',compact('item'));
     }
 
-    // 出品機能
-    public function sell() {
-
-    }
 }

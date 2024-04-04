@@ -40,16 +40,16 @@ Route::group(['middleware' => ['auth']], function(){
 Route::get('/', [ItemController::class,'index']);
 
 // 商品詳細ページ表示
-Route::get('/item/item_id', [ItemController::class,'detail']);
+Route::get('/item/{item_id}', [ItemController::class,'detail']);
 
 // 購入ページ表示
-Route::get('/purchase/item_id', [PurchaseController::class,'showPurchase']);
+Route::get('/purchase/{item_id}', [PurchaseController::class,'showPurchase']);
 
 // 住所変更ページ表示
-Route::get('/purchase/address/item_id', [PurchaseController::class,'showAddress']);
+Route::get('/purchase/address/{item_id}', [PurchaseController::class,'showAddress']);
 
 // コメントページ表示
-Route::get('/comment/item_id', [ItemController::class,'showComment']);
+Route::get('/comment/{item_id}', [ItemController::class,'showComment']);
 
 // マイページ画面表示
 Route::get('/my_page', [UserController::class,'my_page']);
@@ -60,4 +60,5 @@ Route::get('/my_page/profile', [UserController::class,'showProfile']);
 // 出品ページ表示
 Route::get('/sell', [SellController::class,'showSell']);
 
-Route::post('/sell', [SellController::class, 'upload']);
+// 出品機能
+Route::post('/sell', [SellController::class, 'sell']);
