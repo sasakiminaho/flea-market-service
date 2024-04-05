@@ -24,7 +24,7 @@
                 </div>
             </form>
             <div class="login">
-                <a href="" class="login-button">ログインはこちら</a>
+                <a href="/login" class="login-button">ログインはこちら</a>
             </div>
     </div>
 </div>

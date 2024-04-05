@@ -62,3 +62,6 @@ Route::get('/sell', [SellController::class,'showSell']);
 
 // 出品機能
 Route::post('/sell', [SellController::class, 'sell']);
+
+// 出品完了ページ
+Route::get('/sell_done', [SellController::class,'sellDone']);

@@ -1,0 +1,26 @@
+.sell_done {
+    width: 50%;
+    margin: 0 auto;
+    height: 670px;
+}
+
+.sell_done_alert {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.my_page_button {
+    border: solid 1px #FF5555;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 8px;
+    height: 40px;
+}
+
+.my_page {
+    text-decoration: none;
+    color: #FF5555;
+}

@@ -24,7 +24,7 @@
             </div>
         </form>
         <div class="register">
-            <a href="" class="register-button">ログインはこちら</a>
+            <a href="/register" class="register-button">会員登録はこちら</a>
         </div>
     </div>
 </div>

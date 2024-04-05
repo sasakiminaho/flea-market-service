@@ -15,7 +15,7 @@
                 {{ $item_detail->name }}
             </div>
             <div class="item-brand-name">
-                ブランド名
+                {{ $item_detail->brand }}
             </div>
             <div class="item-price">
                 ¥{{ $item_detail->price }}
@@ -25,7 +25,7 @@
                 <a href="/comment/{item_id}" class="comment-page" style="text-decoration:none;">💬</a>
             </div>
             <div class="purchase_button">
-                <a href="/purchase/item_id"><button class="purchase">購入する</button></a>
+                <a href="/purchase/{{{$item_detail->id}}}"><button class="purchase">購入する</button></a>
             </div>
             <div class="item_description">
                 <div class="description_title">商品説明

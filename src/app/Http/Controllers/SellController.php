@@ -24,6 +24,7 @@ class SellController extends Controller
         $item = Item::create([
             "user_id" => Auth::user()->id,
             "name" => $request->input("name"),
+            "brand" => $request->input("brand"),
             "image" => $file_name,
             "price" => $request->input("price"),
             "state" => $request->input("state"),
@@ -35,7 +36,12 @@ class SellController extends Controller
             "category" => $request->input("category")
         ]);
 
-        return view('/my_page',compact('item'));
+        return view('/sell_done');
+    }
+
+    // 出品完了ページ表示
+    public function sellDone(){
+        return view('sell_done');
     }
 
 }

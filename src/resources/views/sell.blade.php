@@ -66,6 +66,10 @@
                     <div class="item_name_title">商品名</div>
                     <input type="text" class="item_name_input" name="name">
                 </div>
+                <div class="brand_name">
+                    <div class="brand_name_title">ブランド名</div>
+                    <input type="text" class="brand_name_input" name="brand">
+                </div>
                 <div class="item_explanation">
                     <div class="item_explanation_title">商品の説明</div>
                     <textarea name="explanation" id="explanation" cols="30" rows="5" class="item_explanation_textarea"></textarea>

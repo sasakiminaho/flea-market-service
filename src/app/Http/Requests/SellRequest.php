@@ -25,6 +25,7 @@ class SellRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:50',
+            'brand' => 'required|string|max:50',
             'price' => 'required|integer',
             'state' => 'required|string|max:50',
             'explanation' => 'required|string|max:500',
@@ -38,6 +39,9 @@ class SellRequest extends FormRequest
             'name.required' => '商品名を入力してください',
             'name.string' => '商品名を文字列で入力してください',
             'name.max' => '商品名を50文字以内で入力してください',
+            'brand.required' => 'ブランド名を入力してください',
+            'brand.string' => 'ブランド名を文字列で入力してください',
+            'brand.max' => 'ブランド名を50文字以内で入力してください',
             'price.required' => '販売価格を入力してください',
             'price.integer' => '販売価格を数字で入力してください',
             'state.required' => '商品の状態を入力してください',

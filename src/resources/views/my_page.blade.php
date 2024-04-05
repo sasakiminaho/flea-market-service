@@ -31,7 +31,7 @@
         <div class="content1">
             @foreach($sell_items as $sell_item)
             <a href="/item/{{{ $sell_item->id }}}">
-            <img src="{{ asset('storage/' .$sell_item->image) }}" alt=""></a>
+            <img src="{{ asset('storage/' .$sell_item->image) }}" alt="" width="20%" height="40%"></a>
             @endforeach
         </div>
         <div class="content2">
