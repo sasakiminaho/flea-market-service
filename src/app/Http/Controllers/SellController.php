@@ -36,7 +36,7 @@ class SellController extends Controller
             "category" => $request->input("category")
         ]);
 
-        return view('/sell_done');
+        return view('sell_done');
     }
 
     // 出品完了ページ表示

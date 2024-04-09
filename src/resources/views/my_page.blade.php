@@ -8,8 +8,8 @@
 <div class="my_page_information">
     <div class="user_information">
         <div class="user_image">
-            <img src="" alt="" class="image">
-            <div class="user_name">ユーザー名</div>
+            <img src="{{ asset('storage/' .$profile) }}" alt="" class="image">
+            <div class="user_name">{{ Auth::user()->name }}</div>
         </div>
         <div class="profile_button">
             <a href="/my_page/profile">

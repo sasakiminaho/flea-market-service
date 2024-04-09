@@ -9,11 +9,11 @@
     <div class="purchase_edit">
         <div class="item-information">
             <div class="item-image">
-                <img src="" alt="商品画像">
+                <img src="{{ asset('storage/' .$item_detail->image) }}" alt="" width="120px" height="150px" class="image">
             </div>
             <div class="item_detail">
-                <p class="item_name">商品名</p>
-                <p class="item_price">¥47,000</p>
+                <p class="item_name">{{ $item_detail->name }}</p>
+                <p class="item_price">¥{{ $item_detail->price}}</p>
             </div>
         </div>
         <div class="payment_change">
@@ -37,8 +37,8 @@
                 <div class="payment_method">支払い方法</div>
             </div>
             <div class="item_purchase_contents">
-                <div class="commodity-price">¥47,000</div>
-                <div class="payment-amount">¥47,000</div>
+                <div class="commodity-price">¥{{ $item_detail->price}}</div>
+                <div class="payment-amount">¥{{ $item_detail->price}}</div>
                 <div class="payment_method">コンビニ支払い</div>
             </div>
         </div>

@@ -57,11 +57,17 @@ Route::get('/my_page', [UserController::class,'my_page']);
 // プロフィール編集画面表示
 Route::get('/my_page/profile', [UserController::class,'showProfile']);
 
+// プロフィール更新機能
+Route::post('/my_page/profile', [UserController::class,'profileUpdate']);
+
+// プロフィール更新完了ページ表示
+Route::get('/profile_done', [UserController::class,'profileDone']);
+
 // 出品ページ表示
 Route::get('/sell', [SellController::class,'showSell']);
 
 // 出品機能
 Route::post('/sell', [SellController::class, 'sell']);
 
-// 出品完了ページ
+// 出品完了ページ表示
 Route::get('/sell_done', [SellController::class,'sellDone']);

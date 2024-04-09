@@ -14,7 +14,10 @@
     </div>
     <div class="contents">
         <div class="content1">
-            おすすめの商品が表示されます。
+            @foreach($items as $item)
+            <a href="/item/{{{ $item->id }}}">
+            <img src="{{ asset('storage/' .$item->image) }}" alt="" width="20%" height="40%"></a>
+            @endforeach
         </div>
         <div class="content2">
             お気に入り登録した商品が表示されます。

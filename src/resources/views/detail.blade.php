@@ -35,8 +35,7 @@
                 <div class="item_information_title">商品の情報</div>
                 <div class="item_category">
                     <div class="category_title">カテゴリー</div>
-                    <div class="category_contents">洋服</div>
-                    <div class="category_contents">メンズ</div>
+                    <div class="category_contents">{{ $category->category }}</div>
                 </div>
                 <div class="item_status">
                     <div class="status_title">商品の状態</div>
