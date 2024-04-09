@@ -20,7 +20,10 @@
             @endforeach
         </div>
         <div class="content2">
-            お気に入り登録した商品が表示されます。
+            @foreach($likes as $like)
+            <a href="/item/{{{ $like->item->id }}}">
+            <img src="{{ asset('storage/' . $like->item->image) }}" alt="" width="20%" height="40%">
+            @endforeach
         </div>
     </div>
 </div>

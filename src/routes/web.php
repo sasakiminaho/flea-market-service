@@ -7,6 +7,7 @@ use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SellController;
+use App\Http\Controllers\LikeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,9 @@ Route::post('/sell', [SellController::class, 'sell']);
 
 // 出品完了ページ表示
 Route::get('/sell_done', [SellController::class,'sellDone']);
+
+// お気に入り追加機能
+Route::get('/item/{item_id}/like', [LikeController::class, 'like'])->name('like');
+
+// お気に入り削除機能
+Route::get('/item/{item_id}/unlike', [LikeController::class, 'unlike'])->name('unlike');

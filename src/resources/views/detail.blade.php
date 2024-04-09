@@ -21,8 +21,38 @@
                 ¥{{ $item_detail->price }}
             </div>
             <div class="button">
-                <div class="like_button">⭐︎</div>
-                <a href="/comment/{item_id}" class="comment-page" style="text-decoration:none;">💬</a>
+
+                @php
+                $like_flag = false;
+                @endphp
+
+                @foreach($likes as $like)
+
+                @if($like['item_id']===$item_detail['id'])
+
+                @php
+                $like_flag = true
+                @endphp
+
+                @break
+
+                @else
+
+                @php
+                $like_flag = false;
+                @endphp
+
+                @endif
+
+                @endforeach
+
+
+                @if($like_flag)
+                <a href="{{ route('unlike',$item_detail) }}" class="like-button"><img src="{{ asset('img/like.svg') }}" alt="" width="25px" height="25px"></a>
+                @else
+                <a href="{{ route('like',$item_detail) }}" class="like-button"><img src="{{ asset('img/unlike.svg') }}" alt="" width="25px" height="25px"></a>
+                @endif
+                <a href="/comment/{item_id}" class="comment-page" style="text-decoration:none;"><img src="{{ asset('img/comment.svg') }}" alt="" width="25px" height="25px"></a>
             </div>
             <div class="purchase_button">
                 <a href="/purchase/{{{$item_detail->id}}}"><button class="purchase">購入する</button></a>
