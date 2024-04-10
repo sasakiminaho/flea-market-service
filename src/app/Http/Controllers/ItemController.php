@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CommentRequest;
 use App\Models\Item;
 use App\Models\Category;
 use App\Models\Like;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Auth;
+
 
 class ItemController extends Controller
 {
@@ -32,7 +35,32 @@ class ItemController extends Controller
     }
 
     // コメントページ表示
-    public function showComment() {
-        return view('comment');
+    public function showComment($id) {
+        $comments = Comment::where('item_id',$id)->with('user:id,name,image')->get();;
+        if(Auth::check()) {
+            $item_detail = Item::find($id);
+            $likes = Like::where('user_id',auth::user()->id, 'item_id')->get();
+            return view('comment', compact('item_detail','likes','comments'));
+        }else {
+            $item_detail = Item::find($id);
+            return view('comment', compact('item_detail','comments'));
+        }
+    }
+
+    // コメント追加機能
+    public function comment(CommentRequest $request) {
+        $comments = Comment::create([
+            "user_id" => Auth::user()->id,
+            "item_id" => $request->id,
+            "comment" => $request->comment,
+        ]);
+        return back();
+    }
+
+    // コメント削除機能
+    public function commentDelete($comment_id) {
+        $comment = Comment::where('id', $comment_id)->first();
+        $comment->delete();
+        return back();
     }
 }

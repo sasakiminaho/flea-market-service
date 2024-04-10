@@ -50,7 +50,7 @@ Route::get('/purchase/{item_id}', [PurchaseController::class,'showPurchase']);
 Route::get('/purchase/address/{item_id}', [PurchaseController::class,'showAddress']);
 
 // コメントページ表示
-Route::get('/comment/{item_id}', [ItemController::class,'showComment']);
+Route::get('/comment/{item_id}', [ItemController::class,'showComment'])->name('comment');
 
 // マイページ画面表示
 Route::get('/my_page', [UserController::class,'my_page']);
@@ -78,3 +78,9 @@ Route::get('/item/{item_id}/like', [LikeController::class, 'like'])->name('like'
 
 // お気に入り削除機能
 Route::get('/item/{item_id}/unlike', [LikeController::class, 'unlike'])->name('unlike');
+
+// コメント追加機能
+Route::post('/comment/{item_id}',[ItemController::class, 'comment']);
+
+// コメント削除機能
+Route::delete('/comment/delete/{comment_id}',[ItemController::class, 'commentDelete'])->name('comment.destroy');

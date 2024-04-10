@@ -52,7 +52,7 @@
                 @else
                 <a href="{{ route('like',$item_detail) }}" class="like-button"><img src="{{ asset('img/unlike.svg') }}" alt="" width="25px" height="25px"></a>
                 @endif
-                <a href="/comment/{item_id}" class="comment-page" style="text-decoration:none;"><img src="{{ asset('img/comment.svg') }}" alt="" width="25px" height="25px"></a>
+                <a href="/comment/{{{$item_detail->id}}}" class="comment-page" style="text-decoration:none;"><img src="{{ asset('img/comment.svg') }}" alt="" width="25px" height="25px"></a>
             </div>
             <div class="purchase_button">
                 <a href="/purchase/{{{$item_detail->id}}}"><button class="purchase">購入する</button></a>
