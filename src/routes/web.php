@@ -84,3 +84,9 @@ Route::post('/comment/{item_id}',[ItemController::class, 'comment']);
 
 // コメント削除機能
 Route::delete('/comment/delete/{comment_id}',[ItemController::class, 'commentDelete'])->name('comment.destroy');
+
+// 支払い方法選択ページ表示
+Route::get('/payment/{item_id}',[PurchaseController::class,'showPay'])->name('payment');
+
+// 支払い方法変更機能
+Route::post('/purchase/{item_id}', [PurchaseController::class, 'payChange'])->name('payment.change');

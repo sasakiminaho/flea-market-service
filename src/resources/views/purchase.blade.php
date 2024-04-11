@@ -19,7 +19,7 @@
         <div class="payment_change">
             <div class="payment_title">支払い方法</div>
             <div class="pay_contents">
-                <a href="" class="change-button">変更する</a>
+                <a href="/payment/{{$item_detail->id}}" class="change-button">変更する</a>
             </div>
         </div>
         <div class="address_change">
@@ -39,7 +39,7 @@
             <div class="item_purchase_contents">
                 <div class="commodity-price">¥{{ $item_detail->price}}</div>
                 <div class="payment-amount">¥{{ $item_detail->price}}</div>
-                <div class="payment_method">コンビニ支払い</div>
+                <div class="payment_method">{{ $payment->payment ?? '' }}</div>
             </div>
         </div>
         <div class="purchase_decision">

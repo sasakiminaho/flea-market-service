@@ -1,0 +1,30 @@
+.payment_page {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+.payment_select {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 50px;
+}
+
+.select-box {
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.change_submit_button {
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    background-color: #FF5555;
+    color: white;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
