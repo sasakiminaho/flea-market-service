@@ -25,7 +25,7 @@
         <div class="address_change">
             <div class="address_title">配送先</div>
             <div class="address_contents">
-                <a href="/purchase/address/item_id" class="change-button">変更する</a>
+                <a href="/purchase/address/{{$item_detail->id}}" class="change-button">変更する</a>
             </div>
         </div>
     </div>
@@ -42,6 +42,7 @@
                 <div class="payment_method">{{ $payment->payment ?? '' }}</div>
             </div>
         </div>
+        <form action="{{ route('purchase') }}" method="post"></form>
         <div class="purchase_decision">
             <button class="purchase_decision_button">購入する</button>
         </div>

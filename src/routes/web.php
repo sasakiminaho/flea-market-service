@@ -49,6 +49,8 @@ Route::get('/purchase/{item_id}', [PurchaseController::class,'showPurchase']);
 // 住所変更ページ表示
 Route::get('/purchase/address/{item_id}', [PurchaseController::class,'showAddress']);
 
+Route::post('/purchase/address/change/{item_id}',[PurchaseController::class, 'addressChange'])->name('address.change');
+
 // コメントページ表示
 Route::get('/comment/{item_id}', [ItemController::class,'showComment'])->name('comment');
 
