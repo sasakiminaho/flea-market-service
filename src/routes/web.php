@@ -46,6 +46,13 @@ Route::get('/item/{item_id}', [ItemController::class,'detail']);
 // 購入ページ表示
 Route::get('/purchase/{item_id}', [PurchaseController::class,'showPurchase']);
 
+// 購入機能
+Route::get('/purchase/{item_id}/done',[PurchaseController::class, 'purchase']);
+Route::post('/purchase/{item_id}/done',[PurchaseController::class, 'purchase'])->name('purchase');
+
+// 購入完了ページ表示
+Route::get('/purchase_done', [PurchaseController::class,'purchaseDone']);
+
 // 住所変更ページ表示
 Route::get('/purchase/address/{item_id}', [PurchaseController::class,'showAddress']);
 
@@ -87,8 +94,8 @@ Route::post('/comment/{item_id}',[ItemController::class, 'comment']);
 // コメント削除機能
 Route::delete('/comment/delete/{comment_id}',[ItemController::class, 'commentDelete'])->name('comment.destroy');
 
-// 支払い方法選択ページ表示
-Route::get('/payment/{item_id}',[PurchaseController::class,'showPay'])->name('payment');
+// // 支払い方法選択ページ表示
+// Route::get('/payment/{item_id}',[PurchaseController::class,'showPay'])->name('payment');
 
 // 支払い方法変更機能
 Route::post('/purchase/{item_id}', [PurchaseController::class, 'payChange'])->name('payment.change');

@@ -15,9 +15,14 @@ class ItemController extends Controller
 {
     // トップページ表示
     public function index() {
+        if(Auth::check()) {
         $items = Item::all();
         $likes = Like::where('user_id', \Auth::user()->id)->with('item:id,name,brand,image,price,state,explanation')->get();
         return view('index',compact('items','likes'));
+        }else {
+            $items = Item::all();
+            return view('index',compact('items'));
+        }
     }
 
     // 商品詳細ページ表示

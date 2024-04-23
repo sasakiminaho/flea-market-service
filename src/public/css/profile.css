@@ -28,6 +28,10 @@
     background-color: silver;
 }
 
+.image_input {
+    margin-top: 5px;
+}
+
 .change_button {
     margin-left: 30px;
     padding-top: 50px;

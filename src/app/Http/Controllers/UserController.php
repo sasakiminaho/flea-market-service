@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Item;
 use App\Models\User;
+use App\Models\Purchase;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -14,7 +15,9 @@ class UserController extends Controller
         $sell_items = Item::where('user_id', \Auth::user()->id)->get();
         $profile = Auth::user()->image;
 
-        return view('my_page', compact('sell_items', 'profile'));
+        $purchase_items = Purchase::where('user_id', \Auth::user()->id)->with('item:id,name,image')->get();
+
+        return view('my_page', compact('sell_items', 'purchase_items', 'profile'));
     }
 
     // プロフィール編集画面表示

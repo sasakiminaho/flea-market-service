@@ -15,8 +15,7 @@
             <div class="profile_image">
                 <img src="" alt="" class="image" name="image">
                 <div class="change_button">
-                    <input type="file" name="image">
-                    <button class="image_select">画像を選択する</button>
+                    <input type="file" name="image" class="image_input">
                 </div>
             </div>
             <div class="user-name">

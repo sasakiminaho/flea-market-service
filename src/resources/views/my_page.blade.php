@@ -20,8 +20,8 @@
         </div>
     </div>
     <div class="container">
-    <input type="radio" name="radio" id="tab1" checked>
-    <input type="radio" name="radio" id="tab2">
+    <input type="radio" name="radio" id="tab1" class="radio" checked>
+    <input type="radio" name="radio" id="tab2" class="radio">
     <div class="tabs">
         <label for="tab1" class="tab1">出品した商品
         </label>
@@ -35,7 +35,10 @@
             @endforeach
         </div>
         <div class="content2">
-            購入した商品が表示されます。
+            @foreach($purchase_items as $purchase_item)
+            <a href="/item/{{{ $purchase_item->item->id }}}">
+            <img src="{{ asset('storage/' .$purchase_item->item->image) }}" alt="" width="20%" height="40%"></a>
+            @endforeach
         </div>
     </div>
 </div>

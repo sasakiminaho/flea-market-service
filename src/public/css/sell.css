@@ -32,6 +32,10 @@
     border-radius: 3px;
 }
 
+.image_input {
+    margin-top: 55px;
+}
+
 .item_image_select-button {
     border: solid 1px #FF5555;
     background-color: white;
