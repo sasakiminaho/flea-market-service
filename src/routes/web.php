@@ -88,6 +88,9 @@ Route::get('/item/{item_id}/like', [LikeController::class, 'like'])->name('like'
 // お気に入り削除機能
 Route::get('/item/{item_id}/unlike', [LikeController::class, 'unlike'])->name('unlike');
 
+// ログアウト状態のお気に入り登録
+Route::get('/item',[LikeController::class,'noUser'])->name('no.user');
+
 // コメント追加機能
 Route::post('/comment/{item_id}',[ItemController::class, 'comment']);
 

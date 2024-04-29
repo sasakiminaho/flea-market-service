@@ -24,4 +24,10 @@ class LikeController extends Controller
         $like->delete();
         return back();
     }
+
+    // ログアウト状態のお気に入り登録ボタン押下
+    public function noUser() {
+        session()->flash('message', 'ログインをしてください');
+        return back();
+    }
 }

@@ -9,7 +9,7 @@
     <div class="purchase_edit">
         <div class="item-information">
             <div class="item-image">
-                <img src="{{ asset('storage/' .$item_detail->image) }}" alt="" width="120px" height="150px" class="image">
+                <img src="{{ asset('storage/' .$item_detail->image) }}" alt="" width="150px" height="150px" class="image">
             </div>
             <div class="item_detail">
                 <p class="item_name">{{ $item_detail->name }}</p>
@@ -28,7 +28,7 @@
                     </select>
                 </div>
                 <div class="pay_contents">
-                    <button type="submit" class="change-button">変更する</button>
+                    <button type="submit" class="payment-change_button">変更する</button>
                 </div>
             </div>
         </form>
@@ -61,8 +61,8 @@
             @enderror
         <form action="/purchase/{item_id}/done" method="post">
             @csrf
-            <input type="text" name="item_id" value="{{$item_detail->id}}">
-            <input type="text" name="shipping_address_id" value="{{ old('shipping_address_id', $address ->id ?? '')}}">
+            <input type="hidden" name="item_id" value="{{$item_detail->id}}">
+            <input type="hidden" name="shipping_address_id" value="{{ old('shipping_address_id', $address ->id ?? '')}}">
             <div class="purchase_decision">
                 <button type="submit" class="purchase_decision_button">購入する</button>
             </div>

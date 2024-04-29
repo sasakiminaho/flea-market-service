@@ -30,8 +30,8 @@
 </div>
 @else
 <div class="container">
-    <input type="radio" name="radio" id="tab1" checked>
-    <input type="radio" name="radio" id="tab2">
+    <input type="radio" name="radio" id="tab1" class="radio" checked>
+    <input type="radio" name="radio" id="tab2" class="radio">
     <div class="tabs">
         <label for="tab1" class="tab1">おすすめ</label>
         <label for="tab2" class="tab2">マイリスト</label>

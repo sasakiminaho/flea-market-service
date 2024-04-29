@@ -3,7 +3,6 @@
 }
 
 .item-detail_page {
-    display: flex;
     height: 700px;
 }
 
@@ -15,13 +14,14 @@
 
 .image {
     background-color: gainsboro;
-    width: 350px;
-    height: 400px;
+    width: 150px;
+    height: 150px;
 
 }
 
 .item-detail {
-    width: 30%;
+    width: 100%;
+    margin-left: 20px;
     margin-top: 50px;
 }
 
@@ -51,6 +51,7 @@
 .comment-page {
     width: 45px;
     padding-top: 10px;
+    border: solid 1px gree;
 }
 
 .user_information {
@@ -89,10 +90,15 @@
     text-decoration: none;
 }
 .comment {
+    width: 90%;
+}
+
+.comment_input {
     width: 100%;
 }
 
 .comment_button {
+    width: 90%;
     height: 40px;
 }
 
@@ -108,4 +114,9 @@
 
 .error {
     color: red;
+}
+
+.session_message {
+    background-color: #FF5555;
+    color: white;
 }
