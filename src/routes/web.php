@@ -102,3 +102,9 @@ Route::delete('/comment/delete/{comment_id}',[ItemController::class, 'commentDel
 
 // 支払い方法変更機能
 Route::post('/purchase/{item_id}', [PurchaseController::class, 'payChange'])->name('payment.change');
+
+// 検索結果ページ
+Route::get('/search_results',[ItemController::class,'searchResults']);
+
+// 検索機能
+Route::post('/search_results',[ItemController::class,'search'])->name('search');

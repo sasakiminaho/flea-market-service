@@ -68,4 +68,17 @@ class ItemController extends Controller
         $comment->delete();
         return back();
     }
+
+    // 検索結果ページ表示
+    public function searchResults() {
+        return view('search_results');
+    }
+
+    // 検索機能
+    public function search(Request $request) {
+        $keyword = $request->keyword;
+        $search_items = Category::where('category', 'LIKE', "%{$keyword}%")->with('item')->get();
+
+        return view('search_results',compact('search_items'));
+    }
 }
