@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/purchase.css') }}">
+
 @endsection
 
 @section('content')
@@ -52,21 +53,62 @@
                 <div class="payment_method">{{ $payment->payment ?? '' }}</div>
             </div>
         </div>
-            @error('item_id')
-            <div class="error">{{ $message }}</div>
-            @enderror
 
-            @error('shipping_address_id')
-            <div class="error">{{ $message }}</div>
-            @enderror
-        <form action="/purchase/{item_id}/done" method="post">
+        @error('item_id')
+        <div class="error">{{ $message }}</div>
+        @enderror
+
+        @error('shipping_address_id')
+        <div class="error">{{ $message }}</div>
+        @enderror
+
+        <form action="{{ route('payment.store', ['item_id' => $item_detail->id]) }}" method="post" id="purchase">
             @csrf
             <input type="hidden" name="item_id" value="{{$item_detail->id}}">
             <input type="hidden" name="shipping_address_id" value="{{ old('shipping_address_id', $address ->id ?? '')}}">
+            <div class="container">
+                @if (session('flash_alert'))
+                    <div class="alert alert-danger">{{ session('flash_alert') }}</div>
+                @elseif(session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
+                <div class="p-5">
+                    <div class="col-6 card">
+                        <div class="card-header">Stripe決済</div>
+                        <div class="card-body">
+                            @csrf
+                            <div>
+                                <label for="card_number">カード番号</label>
+                                <div id="card-number" class="form-control"></div>
+                            </div>
+
+                            <div>
+                                <label for="card_expiry">有効期限</label>
+                                <div id="card-expiry" class="form-control"></div>
+                            </div>
+
+                            <div>
+                                <label for="card-cvc">セキュリティコード</label>
+                                <div id="card-cvc" class="form-control"></div>
+                            </div>
+
+                            <div id="card-errors" class="text-danger">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="purchase_decision">
-                <button type="submit" class="purchase_decision_button">購入する</button>
+                <button class="purchase_decision_button">
+                    購入する
+                </button>
             </div>
         </form>
     </div>
 </div>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{{ asset('/js/main.js') }}"></script>
+
 @endsection
