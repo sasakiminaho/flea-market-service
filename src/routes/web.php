@@ -8,6 +8,7 @@ use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SellController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,8 +48,14 @@ Route::get('/item/{item_id}', [ItemController::class,'detail']);
 Route::get('/purchase/{item_id}', [PurchaseController::class,'showPurchase']);
 
 // 購入機能
-Route::get('/purchase/{item_id}/done',[PurchaseController::class, 'purchase']);
-Route::post('/purchase/{item_id}/done',[PurchaseController::class, 'purchase'])->name('purchase');
+Route::get('/payment/create',[PurchaseController::class, 'purchase']);
+Route::post('/payment/create',[PurchaseController::class, 'purchase'])->name('purchase');
+
+// 決済フォーム
+Route::prefix('payment')->name('payment.')->group(function(){
+    Route::get('/create/{item_id}',[PurchaseController::class, 'showPurchase'])->name('create');
+    Route::post('/store/{item_id}', [PurchaseController::class, 'purchase'])->name('store');
+});
 
 // 購入完了ページ表示
 Route::get('/purchase_done', [PurchaseController::class,'purchaseDone']);
@@ -108,3 +115,5 @@ Route::get('/search_results',[ItemController::class,'searchResults']);
 
 // 検索機能
 Route::post('/search_results',[ItemController::class,'search'])->name('search');
+
+

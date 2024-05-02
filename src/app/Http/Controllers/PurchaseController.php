@@ -20,11 +20,28 @@ class PurchaseController extends Controller
 
     // 購入機能
     public function purchase($id,PurchaseRequest $request) {
+
         $purchase = Purchase::create([
             "user_id" => Auth::user()->id,
             "item_id" => $request->item_id,
             "shipping_address_id" => $request->shipping_address_id,
         ]);
+
+        $item_detail = Item::where('id',$request->item_id)->first();
+
+
+        // \Stripe\Stripe::setApiKey(config('stripe.stripe_secret_key'));
+
+        // try {
+        //     \Stripe\Charge::create([
+        //         'source' => $request->stripeToken,
+        //         'amount' => $item_detail->price,
+        //         'currency' => 'jpy',
+        //     ]);
+        // } catch (Exception $e) {
+        //     return back()->with('flash_alert', '決済に失敗しました！('. $e->getMessage() . ')');
+        // }
+        // return back()->with('status', '決済が完了しました！');
 
         return view('purchase_done');
     }
