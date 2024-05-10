@@ -74,31 +74,6 @@
                         {{ session('status') }}
                     </div>
                 @endif
-                <div class="p-5">
-                    <div class="col-6 card">
-                        <div class="card-header">Stripe決済</div>
-                        <div class="card-body">
-                            @csrf
-                            <div>
-                                <label for="card_number">カード番号</label>
-                                <div id="card-number" class="form-control"></div>
-                            </div>
-
-                            <div>
-                                <label for="card_expiry">有効期限</label>
-                                <div id="card-expiry" class="form-control"></div>
-                            </div>
-
-                            <div>
-                                <label for="card-cvc">セキュリティコード</label>
-                                <div id="card-cvc" class="form-control"></div>
-                            </div>
-
-                            <div id="card-errors" class="text-danger">
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="purchase_decision">
                 <button class="purchase_decision_button">

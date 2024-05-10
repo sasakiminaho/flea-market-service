@@ -73,7 +73,8 @@
         <body>
             @yield('content')
         </body>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="{{ asset('/js/main.js') }}"></script>
     </main>
-    </script>
 </body>
 </html>
