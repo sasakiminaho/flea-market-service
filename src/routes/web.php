@@ -116,4 +116,3 @@ Route::get('/search_results',[ItemController::class,'searchResults']);
 // 検索機能
 Route::post('/search_results',[ItemController::class,'search'])->name('search');
 
-
